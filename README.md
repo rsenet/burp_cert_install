@@ -1,6 +1,13 @@
 # About Burp Cert Install
 
-Burp Cert Install is a collection of bash script allowing to automate deployment of the Burp certificate based on the Android API version
+Burp Cert Install is a collection of bash script allowing to automate deployment of the Burp certificate based on the Android API version.
+
+To know your exact API version:
+
+```
+$ adb shell getprop ro.build.version.sdk
+30
+```
 
 ## Usage
 
