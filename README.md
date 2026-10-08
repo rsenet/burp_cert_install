@@ -11,6 +11,15 @@ $ adb shell getprop ro.build.version.sdk
 
 ## Usage
 
+The simplest way is to run the main script, which detects the API version of the connected device and launches the matching script:
+
+```
+$ ./inject_certificate.sh
+[+] API 30 detected, running inject_certificate_before_API_34.sh
+```
+
+If several devices are connected, select one with `ANDROID_SERIAL=<serial> ./inject_certificate.sh`.
+
 ### Inject certificate (API <= 23)
 
 Before Android 7.0 (API ≤ 23, up to Marshmallow), certificate management was more lenient, making it easier to intercept SSL/TLS requests for debugging purposes with tools like Burp Suite.
